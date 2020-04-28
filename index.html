@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        p {
+            margin: 0 auto;
+            padding: 0px 18px;
+            max-height: 0;
+            overflow: hidden;
+            transition: all 1s;
+        }
+    </style>
+</head>
+
+<body>
+    <button class="btn">Click me !</button>
+    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quam sit illum modi odio dolorem tempora inventore
+        veniam dolore nemo. Soluta nihil alias numquam, exercitationem aperiam illum! Magnam minus quod rem.</p>
+    <button class="btn">Click me !</button>
+    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quam sit illum modi odio dolorem tempora inventore
+        veniam dolore nemo. Soluta nihil alias numquam, exercitationem aperiam illum! Magnam minus quod rem.</p>
+    <button class="btn">Click me !</button>
+    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quam sit illum modi odio dolorem tempora inventore
+        veniam dolore nemo. Soluta nihil alias numquam, exercitationem aperiam illum! Magnam minus quod rem.</p>
+    <button class="btn">Click me !</button>
+    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quam sit illum modi odio dolorem tempora inventore
+        veniam dolore nemo. Soluta nihil alias numquam, exercitationem aperiam illum! Magnam minus quod rem.</p>
+    <button class="btn">Click me !</button>
+    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quam sit illum modi odio dolorem tempora inventore
+        veniam dolore nemo. Soluta nihil alias numquam, exercitationem aperiam illum! Magnam minus quod rem. Lorem ipsum
+        dolor sit amet consectetur adipisicing elit. Sunt iste sint non, cum ab fugiat nemo mollitia error obcaecati
+        accusantium a est, deleniti dolorem delectus dolores ducimus provident harum reprehenderit ad repudiandae
+        reiciendis fuga, facilis modi enim. Eos sapiente cum cumque? Beatae illo dolores rerum iure ut voluptatibus
+        blanditiis doloribus aliquid? Aspernatur molestias vitae rerum cum harum vero omnis! Eos sit aliquid,
+        repellendus a dolore dicta natus sunt iusto quos excepturi quo veritatis enim itaque labore quas earum
+        molestias. Aperiam laudantium enim nihil quis. Pariatur, magni cum incidunt voluptatibus temporibus dignissimos
+        ab doloremque at fugit omnis, voluptate, praesentium ex molestias.</p>
+</body>
+<script>
+    
+    var btn = document.getElementsByClassName("btn");
+    for (i = 0; i < btn.length; i++) {
+        btn[i].onclick = function () {
+            var allPara = document.getElementsByTagName("p");
+            var para = this.nextElementSibling;
+            var temp = para.style.maxHeight;
+            for(j = 0; j < allPara.length; j++)
+            {
+                allPara[j].style.maxHeight = null;
+            }
+            para.style.maxHeight = temp;
+            if (para.style.maxHeight) {
+                para.style.maxHeight = null;
+            }
+            else {
+                para.style.maxHeight = para.scrollHeight + "px"
+            }
+        }
+    }
+        // btn[1].onclick = function(){
+        //     var para = this.nextElementSibling;
+        //     if(para.style.maxHeight)
+        //     {
+        //         para.style.maxHeight=null;
+        //     }
+        //     else
+        //     {
+        //         para.style.maxHeight = para.scrollHeight+"px"
+
+        //     }
+        // }
+        // btn[2].onclick = function(){
+        //     var para = this.nextElementSibling;
+        //     if(para.style.maxHeight)
+        //     {
+        //         para.style.maxHeight=null;
+        //     }
+        //     else
+        //     {
+        //         para.style.maxHeight = para.scrollHeight+"px"
+
+        //     }
+        // }
+        // btn[3].onclick = function(){
+        //     var para = this.nextElementSibling;
+        //     if(para.style.maxHeight)
+        //     {
+        //         para.style.maxHeight=null;
+        //     }
+        //     else
+        //     {
+        //         para.style.maxHeight = para.scrollHeight+"px"
+
+        //     }
+        // }
+</script>
+
+</html>
